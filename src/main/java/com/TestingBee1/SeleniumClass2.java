@@ -18,9 +18,9 @@ public class SeleniumClass2 {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		WebDriverManager.chromedriver().setup();
 		WebDriver  driver=new ChromeDriver();//child class object can be referred by parent interface reference variable
-		                                      //WebDriver=interface,ChromeDiver is a class,driver is a ChromeDriver object,
+				WebDriverManager.chromedriver().setup();
+                                      //WebDriver=interface,ChromeDiver is a class,driver is a ChromeDriver object,
                                                  //driver is reference variable of WebDriver means interface
 		
 driver.manage().timeouts().pageLoadTimeout(6000l,TimeUnit.SECONDS);

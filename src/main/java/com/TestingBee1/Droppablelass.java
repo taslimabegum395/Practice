@@ -22,7 +22,7 @@ public class Droppablelass {
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get("https://jqueryui.com/droppable/");
-		WebElement frame= driver.findElement(By.tagName("iframe"));
+		WebElement frame= driver.findElement(By.tagName("iframe"));//frame is referance variabla/variable
 		 List<WebElement>totalframe =driver.findElements(By.tagName("iframe"));
 		    totalframe.size();
 		    System.out.println(	totalframe.size());
