@@ -13,14 +13,14 @@ import io.github.bonigarcia.wdm.WebDriverManager;
       public class AutoSuggestiveDropDown {
 
 	    public static void main(String[] args) throws InterruptedException {
-	
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
-		driver.manage().timeouts().pageLoadTimeout(6000l, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(3000l, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		driver.get("https://www.flipkart.com/");
+	    	WebDriverManager.chromedriver().setup();
+			WebDriver driver = new ChromeDriver();
+			driver.manage().timeouts().pageLoadTimeout(6000l, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(3000l, TimeUnit.SECONDS);
+			driver.manage().window().maximize();
+			driver.manage().deleteAllCookies();
+		
+		  driver.get("https://www.flipkart.com/");
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div[@class='_2QfC02']/button")).click();
 		driver.findElement(By.xpath("//input[@class='_3704LK']")).sendKeys("iphone");
